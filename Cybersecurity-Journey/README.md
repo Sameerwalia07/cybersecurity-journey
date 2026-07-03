@@ -1,4 +1,4 @@
-# 🔐 Cybersecurity Journey — [Your Name]
+# 🔐 Cybersecurity Journey — [Sameer Walia]
 
 Documenting my path from beginner to Blue Team / SOC Analyst.
 
@@ -40,9 +40,6 @@ cybersecurity-journey/
 
 ## 🔗 Links
 
-- TryHackMe Profile: [add link]
-- LinkedIn: [add link]
+- TryHackMe Profile: [https://tryhackme.com/p/SAMEERWALIA]
+- LinkedIn: [https://www.linkedin.com/in/sameer-waliaa/]
 
----
-
-*Last updated: [date]*
