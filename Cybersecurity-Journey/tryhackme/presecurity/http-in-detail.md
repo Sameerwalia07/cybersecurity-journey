@@ -2,7 +2,7 @@
 
 **Path:** Pre Security
 **Date completed:** [13/05/2026]
-**Room link:** [https://tryhackme.com/room/httpindetail?vccr=1]
+**Room link:** [https://tryhackme.com/room/httpindetail]
 
 ---
 
