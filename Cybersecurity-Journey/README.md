@@ -31,7 +31,7 @@ cybersecurity-journey/
 
 | Path / Course | Status | Notes |
 |---|---|---|
-| TryHackMe - Pre Security | ✅ Complete | |
+| TryHackMe - Pre Security | ✅ Complete | Fully Documented |
 | TryHackMe - Cyber Security 101 | 🔄 In Progress | |
 | TryHackMe - SOC Level 1 | ⏳ Planned | |
 | LetsDefend.io | ⏳ Planned | |
