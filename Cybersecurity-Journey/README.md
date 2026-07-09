@@ -2,8 +2,8 @@
 
 Documenting my path from beginner to Blue Team / SOC Analyst.
 
-**Currently on:** TryHackMe — Cyber Security 101 path
-**Completed:** TryHackMe — Pre Security path
+**Currently on:** TryHackMe — SOC Level 1 path
+**Completed:** TryHackMe — Pre Security path | Cyber Security 101 path
 **Goal:** SOC Analyst / Blue Team role
 
 ---
