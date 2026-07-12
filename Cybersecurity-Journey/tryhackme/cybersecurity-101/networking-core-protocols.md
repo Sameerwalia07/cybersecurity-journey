@@ -1,6 +1,6 @@
 # TryHackMe — Networking Core Protocols
 
-**Path:** Cyber Security 101
+**Path:** Cyber-Security 101
 **Date completed:** [06/06/2026]
 **Room link:** https://tryhackme.com/room/networkingcoreprotocols
 
