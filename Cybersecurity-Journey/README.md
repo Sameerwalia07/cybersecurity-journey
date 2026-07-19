@@ -22,7 +22,8 @@ understanding deepens.
 cybersecurity-journey/
 ├── tryhackme/
 │   ├── pre-security/          → writeups from the Pre Security path
-│   └── cyber-security-101/    → writeups from the current path
+│   └── cyber-security-101/    → writeups from the Cybersecurity 101 path
+|   |__ soc level 1/           -> writeups from the current path
 ├── notes/                     → standalone concept notes (networking, linux, etc.)
 └── glossary.md                → terms I've learned, explained in my own words
 ```
@@ -32,8 +33,8 @@ cybersecurity-journey/
 | Path / Course | Status | Notes |
 |---|---|---|
 | TryHackMe - Pre Security | ✅ Complete | Fully Documented |
-| TryHackMe - Cyber Security 101 | 🔄 In Progress | |
-| TryHackMe - SOC Level 1 | ⏳ Planned | |
+| TryHackMe - Cyber Security 101 | Complete | Fully Documented |
+| TryHackMe - SOC Level 1 | In Progress | |
 | LetsDefend.io | ⏳ Planned | |
 | CyberDefenders | ⏳ Planned | |
 | Home Lab (Splunk/ELK) | ⏳ Planned | |
