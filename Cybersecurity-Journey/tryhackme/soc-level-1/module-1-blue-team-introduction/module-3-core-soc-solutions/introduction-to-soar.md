@@ -1,7 +1,7 @@
 # TryHackMe — Introduction to SOAR
 
 **Path:** SOC Level 1 — Module 3: Core SOC Solutions
-**Date completed:** [17/06/2026]
+**Date completed:** [17/07/2026]
 **Room link:** [https://tryhackme.com/room/soar]
 
 ---
