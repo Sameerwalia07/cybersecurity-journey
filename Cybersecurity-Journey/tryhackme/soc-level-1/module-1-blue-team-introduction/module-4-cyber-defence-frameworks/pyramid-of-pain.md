@@ -32,11 +32,11 @@ attacker.
 A **hash value** is a fixed-length numeric value that uniquely identifies
 data, produced by a hashing algorithm. Common algorithms:
 - **MD5** — 128-bit hash, designed in 1992; no longer cryptographically
-  secure (collision attacks documented in RFC 6151)
+  secure (collision attacks documented in RFC 6151).
 - **SHA-1** — 160-bit hash; deprecated by NIST in 2011, banned for digital
-  signatures by 2013 due to brute-force vulnerability
+  signatures by 2013 due to brute-force vulnerability.
 - **SHA-2 (e.g. SHA-256)** — 256-bit hash, designed by NIST/NSA to replace
-  SHA-1, currently the recommended standard
+  SHA-1, currently the recommended standard.
 
 Security professionals use hashes to uniquely reference a specific
 malicious file. **Example:** flagging a known ransomware sample by its
