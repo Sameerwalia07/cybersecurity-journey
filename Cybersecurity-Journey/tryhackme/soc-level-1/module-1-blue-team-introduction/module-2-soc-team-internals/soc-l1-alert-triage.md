@@ -24,12 +24,12 @@ stopped, or missed entirely.
 ### From Events to Alerts
 
 The pipeline works like this:
-1. An **event** occurs (user login, process launch, file download, etc.)
-2. The relevant system (OS, firewall, cloud provider) **logs** that event
-3. All logs get shipped to a security solution like **SIEM** or **EDR**
+1. An **event** occurs (user login, process launch, file download, etc.).
+2. The relevant system (OS, firewall, cloud provider) **logs** that event.
+3. All logs get shipped to a security solution like **SIEM** or **EDR**.
 4. Since a SOC can receive **millions of logs per day**, an **alert** — a
    notification generated when a specific event or sequence matches a
-   detection rule — highlights only the suspicious, anomalous events
+   detection rule — highlights only the suspicious, anomalous events.
 
 This is what makes the job possible: instead of manually reviewing millions
 of raw logs, analysts triage just **dozens of alerts per day**.
