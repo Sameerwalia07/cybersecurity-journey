@@ -8,13 +8,13 @@
 
 ## 🎯 What I Learned
 
-- The key capabilities of a traditional SOC
-- The core challenges traditional SOCs face
-- What SOAR is and how it solves those challenges
-- SOAR's three core capabilities: Orchestration, Automation, Response
-- Why SOAR doesn't replace SOC analysts
+- The key capabilities of a traditional SOC.
+- The core challenges traditional SOCs face.
+- What SOAR is and how it solves those challenges.
+- SOAR's three core capabilities: Orchestration, Automation, Response.
+- Why SOAR doesn't replace SOC analysts.
 - What playbooks look like in practice, using Phishing and CVE Patching
-  examples
+  examples.
 
 ## 🧠 In My Own Words
 
