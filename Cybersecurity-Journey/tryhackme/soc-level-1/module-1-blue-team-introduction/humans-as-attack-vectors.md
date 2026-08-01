@@ -8,12 +8,12 @@
 
 ## 🎯 What I Learned
 
-- Why humans are specifically targeted by attackers
-- What social engineering is and the two traits that make it effective
+- Why humans are specifically targeted by attackers.
+- What social engineering is and the two traits that make it effective.
 - Common attack methods that exploit humans: phishing, malware downloads,
-  deepfakes, impersonation, and other techniques
-- The two key defensive tasks: Mitigation and Detection
-- Practical mitigation measures a SOC/company can put in place
+  deepfakes, impersonation, and other techniques.
+- The two key defensive tasks: Mitigation and Detection.
+- Practical mitigation measures a SOC/company can put in place.
 
 ## 🧠 In My Own Words
 
