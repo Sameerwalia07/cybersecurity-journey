@@ -9,10 +9,10 @@
 ## 🎯 What I Learned
 
 - The core alert-based metrics: Alerts Count, False Positive Rate, Alert
-  Escalation Rate, Threat Detection Rate
-- The time-based metrics tied to SLAs: MTTD, MTTA, MTTR
-- What "good" looks like for each metric, and why
-- Practical steps to improve each metric when it's underperforming
+  Escalation Rate, Threat Detection Rate.
+- The time-based metrics tied to SLAs: MTTD, MTTA, MTTR.
+- What "good" looks like for each metric, and why?
+- Practical steps to improve each metric when it's underperforming.
 
 ## 🧠 In My Own Words
 
