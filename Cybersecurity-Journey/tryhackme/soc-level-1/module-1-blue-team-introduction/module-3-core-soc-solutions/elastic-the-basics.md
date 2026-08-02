@@ -9,14 +9,14 @@
 ## 🎯 What I Learned
 
 - What the Elastic Stack (ELK) is and why SOC teams use it like a SIEM
-  despite not being a traditional one
-- The four core components: Elasticsearch, Logstash, Beats, Kibana
-- How these components work together end-to-end
-- The layout of Kibana's Discover tab
-- What index patterns are and why they matter
+  despite not being a traditional one.
+- The four core components: Elasticsearch, Logstash, Beats, Kibana.
+- How these components work together end-to-end.
+- The layout of Kibana's Discover tab.
+- What index patterns are and why they matter.
 - KQL (Kibana Query Language) — free text search, wildcards, logical
-  operators, and field-based search
-- The basics of creating visualisations and dashboards
+  operators, and field-based search.
+- The basics of creating visualisations and dashboards.
 
 ## 🧠 In My Own Words
 
