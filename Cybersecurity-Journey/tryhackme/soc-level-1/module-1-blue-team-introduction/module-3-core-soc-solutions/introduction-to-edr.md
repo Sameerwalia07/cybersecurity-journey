@@ -8,14 +8,14 @@
 
 ## 🎯 What I Learned
 
-- What EDR is and why it's needed beyond traditional antivirus
-- The three pillars of EDR: Visibility, Detection, Response
-- How EDR compares to AV using a real multi-stage attack scenario
-- How EDR actually works technically (agents, telemetry, console)
-- The specific detection techniques EDR uses
-- Response actions available to analysts
-- What telemetry is and what gets collected
-- How EDR fits alongside other tools in the broader security ecosystem
+- What EDR is and why it's needed beyond traditional antivirus.
+- The three pillars of EDR: Visibility, Detection, Response.
+- How EDR compares to AV using a real multi-stage attack scenario.
+- How EDR actually works technically (agents, telemetry, console).
+- The specific detection techniques EDR uses.
+- Response actions available to analysts.
+- What telemetry is and what gets collected.
+- How EDR fits alongside other tools in the broader security ecosystem.
 
 ## 🧠 In My Own Words
 
