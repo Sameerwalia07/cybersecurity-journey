@@ -14,11 +14,11 @@
 
 ## 🎯 What's New / Deeper This Time
 
-- Concrete examples of host-centric vs network-centric logs
-- A worked example of log correlation revealing a hidden attack story
-- Specific Windows/Linux/web server log details
-- Two full worked examples of **building a detection rule from scratch**
-- The specific actions an analyst takes after investigating an alert
+- Concrete examples of host-centric vs network-centric logs.
+- A worked example of log correlation revealing a hidden attack story.
+- Specific Windows/Linux/web server log details.
+- Two full worked examples of **building a detection rule from scratch**.
+- The specific actions an analyst takes after investigating an alert.
 
 ## 🧠 In My Own Words
 
