@@ -10,10 +10,10 @@
 
 - Defensive security covers two core goals: **preventing** cyber attacks and
   **detecting** them when prevention fails, while minimising their impact on
-  systems and the business
-- The Blue Team is the umbrella term for teams working on defensive security
+  systems and the business.
+- The Blue Team is the umbrella term for teams working on defensive security.
 - Key functions within defensive security: SOC, Digital Forensics, Threat
-  Intelligence, Incident Response, and Malware Analysis
+  Intelligence, Incident Response, and Malware Analysis.
 
 ## 🧠 In My Own Words
 
