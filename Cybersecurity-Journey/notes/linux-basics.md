@@ -30,4 +30,4 @@ find / -perm -4000      # find SUID binaries (privilege escalation checks)
 
 ---
 
-*This file grows over time — update it whenever a new Linux command clicks for you.*
+
