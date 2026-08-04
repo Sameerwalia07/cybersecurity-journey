@@ -1,7 +1,6 @@
 # 📖 Glossary — Terms I've Learned
 
-A running list of terms, explained in my own words. Adding a few entries here
-counts as a valid "commit of the day" on lighter days.
+A running list of terms, explained in my own words.
 
 ---
 
