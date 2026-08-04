@@ -11,7 +11,7 @@
 - What DNS (Domain Name System) is and the problem it solves.
 - The structure of a domain name: top-level domain, second-level domain, and
   subdomain.
-- Common DNS record types: A, AAAA, TXT, MX, CNAME
+- Common DNS record types: A, AAAA, TXT, MX, CNAME.
 - The full step-by-step path a DNS request takes, from root servers to the
   final destination
 
