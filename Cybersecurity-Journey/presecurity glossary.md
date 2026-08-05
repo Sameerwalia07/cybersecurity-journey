@@ -1,6 +1,3 @@
-# 📖 Glossary — Terms I've Learned
-
-A running list of terms, explained in my own words.
 
 ---
 # 📖 Glossary — Pre Security Path
