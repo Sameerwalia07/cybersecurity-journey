@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What CyberChef is and why it's described as a "Swiss Army knife for data"
+- What CyberChef is and why it's described as a "Swiss Army knife for data".
 - The four main areas of the CyberChef interface
 - The recipe-based workflow (chaining operations together)
 - A structured thought process for approaching an unknown/encoded string
