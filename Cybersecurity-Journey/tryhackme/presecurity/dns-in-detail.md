@@ -13,7 +13,7 @@
   subdomain.
 - Common DNS record types: A, AAAA, TXT, MX, CNAME.
 - The full step-by-step path a DNS request takes, from root servers to the
-  final destination
+  final destination.
 
 ## 🧠 In My Own Words
 
