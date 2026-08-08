@@ -11,7 +11,7 @@
 - The OSI (Open Systems Interconnection) model is a framework that standardises
   how data travels across a network.
 - It breaks network communication into **7 distinct layers**, each with a
-  specific job
+  specific job.
 - Understanding these layers helps in troubleshooting, and later, in
   understanding where different attacks and defenses operate
 
