@@ -6,10 +6,10 @@ and paths. Updated as new commands are learned — not tied to one room.
 ## Navigation
 
 ```bash
-pwd                  # print working directory
-ls                    # list files/folders
-ls -l                 # long format (permissions, owner, size, date)
-ls -al                # long format + hidden files
+pwd                    # print working directory
+ls                     # list files/folders
+ls -l                  # long format (permissions, owner, size, date)
+ls -al                 # long format + hidden files
 cd /path               # change directory
 cd ..                  # move up one level
 ```
