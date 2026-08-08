@@ -10,7 +10,7 @@
 
 - What a terminal is and why it's used over a GUI in security work.
 - Core navigation and file-listing commands.
-- How to check disk usage and explore key system directories
+- How to check disk usage and explore key system directories.
 
 ## 🧠 In My Own Words
 
