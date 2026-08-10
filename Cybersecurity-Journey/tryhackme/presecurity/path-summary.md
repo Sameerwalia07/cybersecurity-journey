@@ -11,7 +11,7 @@ software/data basics, and an intro to core attack/defense concepts.
 
 ## Key Topics Covered
 
-- **Networking:** LANs, the OSI model, packets & frames, network extension
+- **Networking:** LANs, the OSI model, packets & frames, network extension.
 - **The Web:** DNS, HTTP, how websites work end-to-end
 - **Computers:** hardware basics, client-server model, virtualisation, cloud fundamentals
 - **Operating Systems:** Windows & Linux basics, CLI usage on both, OS security
