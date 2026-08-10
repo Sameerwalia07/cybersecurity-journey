@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- Why protecting data has become critical in a digitalised world
+- Why protecting data has become critical in a digitalised world.
 - The three pillars security revolves around: **Confidentiality, Integrity,
   Availability**
 - What happens when each pillar fails, and real examples tied to each
