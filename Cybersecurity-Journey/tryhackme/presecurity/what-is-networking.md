@@ -1,7 +1,7 @@
 # TryHackMe — What is Networking?
 
 **Path:** Pre Security
-**Date completed:** [add date]
+**Date completed:** [08/05/2026]
 **Room link:** https://tryhackme.com/room/whatisnetworking
 
 ---
