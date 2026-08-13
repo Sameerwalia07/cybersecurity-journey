@@ -10,7 +10,7 @@
 
 - The OSI model and what happens at each of the 7 layers.
 - The difference between TCP and UDP, and when each is used.
-- How DNS resolution works, step by step
+- How DNS resolution works, step by step.
 - What an IP address and MAC address are used for, and how they differ
 
 ## 🧠 In My Own Words
