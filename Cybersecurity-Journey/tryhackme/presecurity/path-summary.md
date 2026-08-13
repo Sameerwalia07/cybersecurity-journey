@@ -13,7 +13,7 @@ software/data basics, and an intro to core attack/defense concepts.
 
 - **Networking:** LANs, the OSI model, packets & frames, network extension.
 - **The Web:** DNS, HTTP, how websites work end-to-end.
-- **Computers:** hardware basics, client-server model, virtualisation, cloud fundamentals
+- **Computers:** hardware basics, client-server model, virtualisation, cloud fundamentals.
 - **Operating Systems:** Windows & Linux basics, CLI usage on both, OS security
 - **Software:** data representation/encoding, intro scripting (Python/JavaScript), SQL basics
 - **Security Concepts:** CIA Triad, cryptography basics, offensive vs defensive perspectives
