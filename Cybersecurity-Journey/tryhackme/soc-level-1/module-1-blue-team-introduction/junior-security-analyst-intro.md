@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What a Junior Security Analyst (SOC Level 1 Analyst) actually does day to day
+- What a Junior Security Analyst (SOC Level 1 Analyst) actually does day to day.
 - The structure of the wider SOC team and each role's purpose
 - Real example scenarios a junior analyst might handle
 
