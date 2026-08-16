@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What a hash value is and how a hash function produces it
+- What a hash value is and how a hash function produces it.
 - The key properties that make hashing useful and secure
 - What a hash collision is, and why the "pigeonhole effect" makes collisions
   mathematically unavoidable (but rare with good algorithms)
