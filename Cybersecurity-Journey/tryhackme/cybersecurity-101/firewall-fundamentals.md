@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What a firewall is and its core purpose
+- What a firewall is and its core purpose.
 - The four main types of firewalls and their characteristics
 - The basic components that make up a firewall rule
 - Rule directionality (inbound, outbound, forward)
