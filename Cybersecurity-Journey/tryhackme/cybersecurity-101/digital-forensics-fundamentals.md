@@ -10,7 +10,7 @@
 
 - What digital forensics is and how it relates to broader forensics and
   cybercrime.
-- The four-step forensic methodology
+- The four-step forensic methodology.
 - What proper evidence acquisition requires (authorization, chain of
   custody, write blockers)
 - The two main types of Windows forensic images
