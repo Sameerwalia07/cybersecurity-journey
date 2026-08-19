@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What Wireshark is and what it's used for
+- What Wireshark is and what it's used for.
 - The layout of the Wireshark interface and its main panes
 - What packet dissection means and what information it reveals
 - How to navigate, filter, and investigate captured traffic
