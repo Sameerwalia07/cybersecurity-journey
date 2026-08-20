@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- How DNS resolves domain names, and its associated record types and tools
+- How DNS resolves domain names, and its associated record types and tools.
 - How HTTP/HTTPS methods work at the protocol level
 - The core commands and port numbers behind FTP, SMTP, POP3, and IMAP
 - How each protocol's commands map to its specific purpose (transferring
