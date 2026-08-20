@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- What a cyber security incident is, and the real-world scale of these events
+- What a cyber security incident is, and the real-world scale of these events.
 - The difference between false positives and true positives, and severity
   levels
 - Common types of incidents
