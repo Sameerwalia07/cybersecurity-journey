@@ -8,7 +8,7 @@
 
 ## 🎯 What I Learned
 
-- Why an IDS is needed even when a firewall is in place
+- Why an IDS is needed even when a firewall is in place.
 - Deployment modes: HIDS vs NIDS
 - Detection modes: signature-based, anomaly-based, hybrid
 - Snort as a real-world IDS example, and its three operating modes
