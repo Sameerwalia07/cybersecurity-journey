@@ -12,7 +12,7 @@
   cybercrime.
 - The four-step forensic methodology.
 - What proper evidence acquisition requires (authorization, chain of
-  custody, write blockers)
+  custody, write blockers).
 - The two main types of Windows forensic images
 - Tools commonly used in digital forensic investigations
 
