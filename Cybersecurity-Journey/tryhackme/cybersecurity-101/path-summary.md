@@ -12,7 +12,7 @@ forensics, incident response, SIEM, firewalls, IDS, and defensive tooling.
 
 ## Key Topics Covered
 
-- **Foundations:** offensive & defensive security intros, search skills
+- **Foundations:** offensive & defensive security intros, search skills.
 - **Linux & Windows:** CLI fundamentals, PowerShell, Active Directory basics
 - **Networking:** core/secure protocols, Wireshark, Tcpdump, Nmap
 - **Cryptography:** hashing, public key crypto, password cracking basics
