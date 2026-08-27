@@ -9,7 +9,7 @@
 ## 🎯 What I Learned
 
 - What a SIEM is and why raw log analysis alone isn't enough.
-- The categories of log sources (host-centric vs network-centric)
+- The categories of log sources (host-centric vs network-centric).
 - Key challenges with logs before a SIEM comes into play
 - Core SIEM features
 - Windows Event Viewer and common Linux log file locations
