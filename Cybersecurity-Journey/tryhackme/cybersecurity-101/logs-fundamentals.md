@@ -10,7 +10,7 @@
 
 - What logs are and why they matter in security work.
 - The main use cases for logs beyond just security.
-- Different types of logs and where they come from
+- Different types of logs and where they come from.
 - The structure of Windows OS logs specifically
 - Basic Linux commands for analysing web server logs directly
 
