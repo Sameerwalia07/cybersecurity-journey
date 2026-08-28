@@ -14,7 +14,7 @@
 - What proper evidence acquisition requires (authorization, chain of
   custody, write blockers).
 - The two main types of Windows forensic images.
-- Tools commonly used in digital forensic investigations
+- Tools commonly used in digital forensic investigations.
 
 ## 🧠 In My Own Words
 
