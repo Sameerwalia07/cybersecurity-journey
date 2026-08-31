@@ -10,7 +10,7 @@
 
 - What computer hardware actually is, and why an OS is needed to make it usable.
 - The role of the OS as the layer between hardware and applications.
-- Common OS types across devices (Windows, macOS, Android, iOS)
+- Common OS types across devices (Windows, macOS, Android, iOS).
 - How the CIA Triad applies specifically at the OS level
 - Common OS-level security weaknesses: weak passwords, weak file permissions,
   and exposure to malicious files
