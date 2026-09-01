@@ -10,7 +10,7 @@
 
 - Why an IDS is needed even when a firewall is in place.
 - Deployment modes: HIDS vs NIDS.
-- Detection modes: signature-based, anomaly-based, hybrid
+- Detection modes: signature-based, anomaly-based, hybrid.
 - Snort as a real-world IDS example, and its three operating modes
 - The structure of a Snort rule
 - Basics of rule creation, testing, and running Snort against pcap files
