@@ -12,7 +12,7 @@
 - The four main types of firewalls and their characteristics.
 - The basic components that make up a firewall rule.
 - Rule directionality (inbound, outbound, forward).
-- How Windows Defender Firewall works and how to create custom rules
+- How Windows Defender Firewall works and how to create custom rules.
 - Common Linux firewall tools
 
 ## 🧠 In My Own Words
