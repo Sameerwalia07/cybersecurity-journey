@@ -9,7 +9,7 @@
 ## 🎯 What I Learned
 
 - What a SOC is and its core purpose.
-- The categories of activity a SOC is focused on detecting
+- The categories of activity a SOC is focused on detecting.
 - The three pillars a SOC is built on: People, Process, Technology
 - Common SOC roles and how responsibilities are split across tiers
 - What alert triage is, and the "5 Ws" framework used to investigate an alert
