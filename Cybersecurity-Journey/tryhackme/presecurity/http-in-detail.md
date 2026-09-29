@@ -11,7 +11,7 @@
 - What HTTP is and the role it plays in web communication.
 - How HTTPS differs from HTTP and why encryption matters.
 - The structure of a URL and what each part means.
-- Common HTTP methods, status codes, and headers
+- Common HTTP methods, status codes, and headers.
 - What cookies are and how they're used
 
 ## 🧠 In My Own Words
