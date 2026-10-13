@@ -11,7 +11,7 @@
 - What a cyber security incident is, and the real-world scale of these events.
 - The difference between false positives and true positives, and severity
   levels.
-- Common types of incidents
+- Common types of incidents.
 - Two major incident response frameworks: SANS (PICERL) and NIST
 - Security solutions that support detection and response: SIEM, AV, EDR
 - The difference between Playbooks and Runbooks
