@@ -14,7 +14,7 @@ forensics, incident response, SIEM, firewalls, IDS, and defensive tooling.
 
 - **Foundations:** offensive & defensive security intros, search skills.
 - **Linux & Windows:** CLI fundamentals, PowerShell, Active Directory basics.
-- **Networking:** core/secure protocols, Wireshark, Tcpdump, Nmap
+- **Networking:** core/secure protocols, Wireshark, Tcpdump, Nmap.
 - **Cryptography:** hashing, public key crypto, password cracking basics
 - **Exploitation Basics:** Metasploit, a real CVE walkthrough (awareness-level)
 - **Web Hacking:** web app basics, JavaScript, SQL, Burp Suite
