@@ -13,7 +13,7 @@
 - What a hash collision is, and why the "pigeonhole effect" makes collisions
   mathematically unavoidable (but rare with good algorithms).
 - Insecure password storage practices and how attacks like rainbow tables
-  exploit weak hashing
+  exploit weak hashing.
 - Real-world use cases: password storage, integrity checking, HMACs
 
 ## 🧠 In My Own Words
