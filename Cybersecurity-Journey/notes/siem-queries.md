@@ -1,7 +1,8 @@
 # SIEM Query Reference — Splunk SPL vs Kibana KQL
 
 Side-by-side syntax reference for the two SIEM query languages covered so
-far, since they solve the same problems with different syntax.
+far, since they solve the same problems with different syntax. Updated with
+`stats`/`table` patterns for exfiltration and network hunting.
 
 ## Basic Search
 
@@ -44,6 +45,67 @@ Source_ip: 238.163.231.224 AND UserName: Suleman
 | sort - field                     # sort descending by a field
 | table field1, field2               # display only specific fields
 | top field                            # show most common values of a field
+```
+
+## Aggregation Patterns (`stats` + `table`)
+
+`stats` turns many raw events into one row per group. `table` then shows
+just the columns I care about. These are the two commands I reach for most
+in triage.
+
+**Total bytes sent out per source IP (exfiltration hunting):**
+```spl
+index=proxy_logs
+| stats sum(bytes_out) as total_bytes by src_ip, dest_domain
+| sort - total_bytes
+| table src_ip, dest_domain, total_bytes
+```
+
+**Many small uploads to one destination (low-and-slow exfil):**
+```spl
+index=proxy_logs http_method=POST
+| stats count, sum(bytes_out) as total_bytes by src_ip, dest_domain
+| where count > 50
+| sort - count
+```
+
+**Long DNS hostnames (possible DNS tunnelling):**
+```spl
+index=dns_logs
+| eval name_len=len(query)
+| where name_len > 50
+| stats count, avg(name_len) as avg_len by src_ip, query
+| sort - count
+```
+
+**Top talkers by destination port (vertical vs horizontal scan hint):**
+```spl
+index=firewall_logs action=blocked
+| stats dc(dest_port) as unique_ports, dc(dest_ip) as unique_hosts by src_ip
+| sort - unique_ports
+| table src_ip, unique_ports, unique_hosts
+```
+*(High `unique_ports` on few hosts = vertical scan; high `unique_hosts` on one
+port = horizontal sweep.)*
+
+**Pattern to remember:**
+```
+search (filter) → stats (aggregate by field) → where (threshold) → sort → table (show)
+```
+
+> ⚠️ Index, sourcetype and field names (`proxy_logs`, `bytes_out`,
+> `dest_domain`, `query`, etc.) are **placeholders**. In a real SIEM, check
+> the actual field names first (the fields sidebar in Splunk, or Discover in
+> Kibana) and adjust.
+
+## Extra SPL Commands
+
+```spl
+| dc(field)                  # distinct count (inside stats)
+| eval new=len(field)        # create a calculated field
+| rare field                 # least common values (good for odd domains/processes)
+| dedup field                # remove duplicate values
+| timechart count by field   # trend over time
 ```
 
 ## Quick Comparison
