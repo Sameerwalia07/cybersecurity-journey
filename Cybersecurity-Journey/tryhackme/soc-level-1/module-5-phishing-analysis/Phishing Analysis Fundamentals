@@ -1,1 +1,162 @@
-hii module 5
+# TryHackMe — Phishing Analysis Fundamentals
+
+**Path:** SOC Level 1 — Module 5: Phishing Analysis
+**Date completed:** 22/07/26
+**Room link:** https://tryhackme.com/room/phishingemails1tryoe
+
+---
+
+## 🎯 What I Learned
+
+- The anatomy of an email address and the protocols behind email delivery
+- The full journey an email takes from sender to recipient
+- Email headers, message source, and how to inspect the email body/HTML
+- How attachments are embedded and identified within a raw email
+- The different types of phishing/malicious email
+- Common characteristics ("red flags") of a phishing email
+- How to safely analyse suspicious links/IPs using defanging
+
+## 🧠 In My Own Words
+
+Spam and phishing remain the most common social engineering threats
+organisations face. Spam is generally low-risk, but **phishing** can trick
+users into disclosing sensitive data or unknowingly deploying malware — a
+single click from one unsuspecting user can give an attacker their initial
+foothold.
+
+### Anatomy of an Email Address
+
+An email address has three parts:
+1. **Username** — identifies the specific recipient's mailbox
+2. **`@` symbol** — separates username from domain, tells the system where
+   to route the message (introduced by Ray Tomlinson on ARPANET in the
+   1970s)
+3. **Domain name** — specifies the mail server responsible for receiving it
+
+**Analogy:** the domain is like the street/building, and the username is
+the specific mailbox within it — together, the mail server knows exactly
+where to deliver the message.
+
+### Email Delivery Protocols
+
+- **SMTP (Simple Mail Transfer Protocol)** — sends emails
+- **POP3 (Post Office Protocol)** — downloads emails to a single device,
+  typically removing them from the server afterward
+- **IMAP (Internet Message Access Protocol)** — syncs emails across
+  multiple devices, keeping them stored server-side
+
+| | POP3 | IMAP |
+|---|---|---|
+| Storage | Single device | Server (synced to multiple devices) |
+| Sent messages | Stored on sending device | Stored on server |
+| Access | Only from the device it was sent to | From any synced device |
+| Server retention | Usually removed after download | Remains unless explicitly deleted |
+
+### An Email's Journey
+
+1. Sender's email client sends the message to their mail server via SMTP
+2. The sending server queries **DNS** for the recipient domain's mail
+   server
+3. DNS returns the recipient's mail server address
+4. The message is delivered across the internet to that server
+5. The recipient's email client connects to their mail server
+6. The message is retrieved via POP3 (download) or IMAP (sync)
+
+An email is made of two parts:
+- **Header** — metadata (sender, servers involved, routing info)
+- **Body** — the actual message content (plain text or HTML)
+
+### Email Headers
+
+Key fields:
+- **From** — sender's address
+- **To** — receiver's address
+- **Reply-To** — where replies get sent (optional, not always present)
+- **Subject** — subject line
+- **Date** — when the email was sent
+
+Viewing the **raw message source** reveals the full header set plus the
+body — including technical details not visible in the normal inbox view,
+which is essential for real investigation.
+
+### Email Body and Attachments
+
+Just like headers, the **HTML source of the body** can be inspected
+directly to see the raw markup behind the rendered message.
+
+**Attachments** can also be reconstructed/analysed via the message source.
+Key headers to look for:
+- **Content-Type** — the file type, e.g. `application/pdf`
+- **Content-Disposition** — confirms it's an attachment and gives the
+  filename
+- **Content-Transfer-Encoding** — often `base64`, showing how the binary
+  file is encoded within the plain-text email format
+
+### Types of Malicious/Suspicious Email
+
+- **Spam** — unsolicited bulk email; a more malicious version is
+  **malspam**
+- **Phishing** — impersonates a trusted entity to steal sensitive info
+- **Spear Phishing** — targeted phishing aimed at a specific
+  person/organisation using personalised info
+- **Whaling** — spear phishing specifically targeting executives
+  (CEO/CFO) for high-value data or financial access
+- **Smishing** — phishing via SMS/text
+- **Vishing** — phishing via voice calls
+
+### Anatomy of a Phishing Email — Common Red Flags
+
+- **Spoofed From address** — mimics a trusted sender (e.g.
+  `noreply@microsof.com` — note the misspelling)
+- **Urgent subject/message** — pressure tactics ("your account will be
+  locked in 24 hours")
+- **Brand impersonation** — matching logos/colours of a real company
+- **Grammar/spelling issues** — less common now with AI-generated phishing,
+  but still a signal
+- **Generic content** — "Dear Customer" instead of an actual name
+- **Hidden/shortened links** — disguising the true destination (e.g.
+  `bit.ly/secure-login`)
+- **Malicious attachments** — disguised file types (e.g.
+  `invoice.pdf.exe`)
+
+### Safe Analysis — Defanging
+
+To avoid accidentally triggering a malicious link/IP during investigation,
+analysts **defang** them — replacing special characters so the link
+becomes unclickable but still readable:
+
+- Original: `http://www.suspiciousdomain.com`
+- Defanged: `hxxp[://]www[.]suspiciousdomain[.]com`
+
+This is standard practice whenever sharing IOCs in a report or ticket.
+
+## 🛠️ Key Terms Introduced
+
+- SMTP, POP3, IMAP
+- Email header fields, message source
+- Content-Type, Content-Disposition, Content-Transfer-Encoding
+- Spam, Malspam, Phishing, Spear Phishing, Whaling, Smishing, Vishing
+- Defanging
+
+## ❓ Questions I Had / Things to Revisit
+
+- Want to practice viewing raw message source on a real sample email to get
+  comfortable finding headers quickly
+- Want to try defanging a URL/IP manually and also using CyberChef's
+  built-in defang recipe
+- Curious how SPF/DKIM/DMARC (mentioned as email authentication concepts)
+  tie into header analysis — want to dig into that in the next room
+
+## ✅ Self-Check
+
+Could I explain this to someone else without notes? **Yes** — I understand
+email structure, delivery protocols, header/body analysis, phishing types,
+and defanging practice confidently.
+
+---
+
+*Good foundational room to kick off this module — email delivery mechanics
+(SMTP/POP3/IMAP) connects directly back to Networking Core Protocols from
+Cyber Security 101, and this is clearly where that knowledge starts getting
+applied to real investigative work.*
+
