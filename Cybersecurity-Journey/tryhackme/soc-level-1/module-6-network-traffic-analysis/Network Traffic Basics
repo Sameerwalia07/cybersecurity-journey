@@ -1,1 +1,173 @@
-hiii module 6...
+# TryHackMe — Network Traffic Basics
+
+**Path:** SOC Level 1 — Module 6: Network Traffic Analysis
+**Date completed:** 01/08/2026
+**Room link:** [https://tryhackme.com/room/networktrafficbasics]
+
+---
+
+## 🎯 What I Learned
+
+- What Network Traffic Analysis (NTA) actually is — and why it's broader
+  than "using Wireshark"
+- Why NTA matters for a SOC, with real scenario examples
+- What information is visible at each OSI layer during traffic analysis
+- North-South vs East-West traffic flows, and real-world flow examples
+  (HTTPS, DNS, SMB with Kerberos)
+- The main ways to observe traffic: logs, full packet capture, and network
+  statistics (NetFlow/IPFIX)
+
+## 🧠 In My Own Words
+
+**Network Traffic Analysis (NTA)** is the process of capturing, inspecting,
+and analysing data as it flows through a network, aiming for full
+visibility into what's communicated inside and outside the organisation.
+Importantly, **NTA is not just "using Wireshark"** — it's a combination of
+correlating multiple logs, deep packet inspection, and network flow
+statistics, all working toward specific goals.
+
+### Why We Analyse Network Traffic
+
+- **Monitor network performance**
+- **Check for abnormalities** — sudden performance peaks, slow network, etc.
+- **Inspect suspicious communication** — e.g. DNS exfiltration, malicious
+  ZIP downloads over HTTP, lateral movement
+
+From a SOC perspective, NTA specifically helps:
+- **Detecting** suspicious/malicious activity
+- **Reconstructing attacks** during incident response
+- **Verifying and validating alerts**
+
+**Real scenario examples:**
+1. A system's logs show deviation from normal behaviour around 4 PM UTC.
+   Analysing the traffic to/from it reveals a suspicious HTTP request, and
+   a malicious ZIP file is extracted from the capture
+2. An alert fires for unusually high DNS request volume from an endpoint.
+   Inspecting the DNS traffic reveals **DNS tunneling** being used to
+   exfiltrate data
+
+### What We Can Observe at Each Layer
+
+- **Application layer** — header info + payload (actual data). Example:
+  an HTTP GET request reveals a client requesting `suspicious_package.zip`,
+  and the response's 200 status confirms it was served — but standard logs
+  won't show the **actual file contents**, only full packet capture would
+- **Transport layer** — TCP/UDP headers; firewall logs usually show
+  source/destination ports and flags, but not sequence numbers — which
+  matter for detecting **session hijacking** (a sudden jump in sequence
+  numbers is a red flag)
+- **Internet layer** — IP headers; typically logged fields are source/
+  destination IP and TTL. Detecting **fragmentation attacks** requires
+  deeper inspection of fragment offset and total length fields, which
+  aren't normally logged
+- **Link layer** — MAC addressing; standard logs show source/destination
+  MAC, but detecting **ARP poisoning/spoofing** requires full packet
+  context — you can't see a MAC address appearing across multiple
+  interfaces, or gratuitous ARP packets with conflicting MACs, from logs
+  alone
+
+**Key insight:** the deeper/more sophisticated the attack, the more likely
+standard logs alone are insufficient — full packet capture becomes
+necessary.
+
+### Traffic Sources
+
+- **Intermediary sources** — devices traffic *passes through*: firewalls,
+  switches, proxies, IDS/IPS, routers, access points. Generate traffic via
+  routing protocols (EIGRP, OSPF, BGP), management protocols (SNMP, PING),
+  logging (Syslog), and support protocols (ARP, STP, DHCP)
+- **Endpoint sources** — devices where traffic *originates and ends*:
+  servers, hosts, IoT devices, printers, cloud resources, mobile devices —
+  these generate the bulk of network bandwidth
+
+### Traffic Flows
+
+- **North-South (N-S)** — traffic entering/exiting the LAN through the
+  firewall (client-server protocols: HTTPS, DNS, SSH, VPN, SMTP, RDP).
+  Closely monitored since it crosses the network boundary
+- **East-West (E-W)** — traffic staying *within* the LAN. Often monitored
+  less closely, but critical — attackers exploit internal services for
+  **lateral movement** once inside. Includes:
+  - Directory/Auth: Kerberos/LDAP, RADIUS/TACACS+, internal CAs
+  - File/Print: SMB/CIFS, IPP/LPD
+  - Infrastructure: DHCP, ARP, internal DNS, routing protocol messages
+  - Application: SQL over TCP, REST/gRPC microservice calls
+  - Backup/Replication: file/database replication traffic
+
+### Worked Flow Examples
+
+**HTTPS with TLS inspection:** the host requests a site → the NGFW's web
+proxy intercepts, acting as the "server" to the client while establishing
+its *own* separate TCP session with the real web server → the proxy
+inspects the response, then forwards it if safe. Result: **two separate
+sessions** (client↔proxy, proxy↔server), though the client only sees one.
+
+**External DNS:** host sends a query → internal DNS server checks its
+cache first → if no cached answer, forwards through the router/firewall to
+external DNS servers → the answer follows the same path back to the host.
+
+**SMB with Kerberos:** accessing a share (e.g. `\\FILESERVER\MARKETING`)
+first requires Kerberos authentication — the host already holds a Ticket
+Granting Ticket (TGT) from login, uses it to request a **service ticket**
+from the Domain Controller's KDC, then uses that service ticket to
+establish the actual SMB session.
+
+### How We Observe Traffic
+
+**Logs** — the first entry point, but **no universal logging standard**
+exists; each vendor decides what to log (e.g. Microsoft's Windows Event
+Logs). Most log select fields (like source/destination IP), not full
+packets. Syslog and SNMP are examples of standardised transport for log
+messages, though the content logged still varies by vendor.
+
+**Full Packet Capture** — needed when logs aren't enough, via:
+- **Network TAP** — a physical inline device copying all traffic without
+  performance impact; operates at the **link layer**, needs no MAC/IP
+  since it copies raw electrical/light signals directly to a monitoring
+  port
+- **Port Mirroring** — a software-based approach copying packets from one
+  port to another (e.g. Cisco's **SPAN**), directing them to an IDS,
+  capture box, or similar system
+
+**Network Statistics** — metadata about traffic flow rather than full
+packets, useful for spotting anomalies like C2 traffic, exfiltration, or
+lateral movement:
+- **NetFlow** — Cisco-developed protocol collecting flow metadata (source/
+  destination, not full packet content); originally Cisco-proprietary,
+  gained cross-vendor templating from v9 onward
+- **IPFIX** — the vendor-neutral successor to NetFlow, developed with the
+  IETF, offering similar capability with more configuration flexibility
+
+Most modern NGFWs/IPS/IDS support NetFlow/IPFIX natively — no dedicated
+new infrastructure is required, just enabling and configuring it.
+
+## 🛠️ Key Terms Introduced
+
+- NTA (Network Traffic Analysis)
+- North-South vs East-West traffic
+- Network TAP, Port Mirroring (SPAN)
+- NetFlow, IPFIX
+- Kerberos TGT / Service Ticket (SMB auth flow)
+
+## ❓ Questions I Had / Things to Revisit
+
+- Want to see a real NetFlow/IPFIX output sample and practice reading it
+- Curious how a SOC decides what E-W traffic is worth logging, given it's
+  "monitored less" by default — where's the practical line drawn?
+- Want to look at a real gratuitous ARP packet example to understand what
+  ARP poisoning actually looks like in a capture
+
+## ✅ Self-Check
+
+Could I explain this to someone else without notes? **Yes** — I can
+explain what's visible at each OSI layer, the N-S/E-W distinction, and the
+three ways to observe traffic (logs, full capture, flow statistics)
+confidently.
+
+---
+
+*Great foundational room before diving into Wireshark specifically — now I
+understand *why* certain things are or aren't visible in logs, which will
+make sense of *why* full packet capture matters so much in the upcoming
+Wireshark rooms.*
+
